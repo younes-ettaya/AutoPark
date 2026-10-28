@@ -55,4 +55,6 @@ export const voituresInitiales = [
     "prixJour": 450,
     "statut": "Disponible"
   }
+  
 ];
+
