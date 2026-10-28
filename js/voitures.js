@@ -202,10 +202,12 @@ function recherche(input) {
       voiture.immatriculation.toLowerCase().startsWith(input.toLowerCase()) 
     
  } ) 
-return datafelter
+
 };
 serch.addEventListener("input", (i) => {
     i.preventDefault();
     recherche(serch.value);
      display();
+
+
 });
