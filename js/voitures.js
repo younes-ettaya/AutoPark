@@ -9,14 +9,22 @@ const PrixJ = document.getElementById("prix-jour");
 const statut = document.getElementById("statut");
 const AjoutBTn = document.getElementById("bouton-enregistrer")
 const annuler = document.getElementById("annuler-modification");
-const serch = document.getElementById("recherche");
-let voitures = [...voituresInitiales];
+const recherche = document.getElementById("recherche");
+
+if (!localStorage.getItem("data")) {
+    localStorage.setItem("data", JSON.stringify(voituresInitiales))
+}
+let voitures = JSON.parse(localStorage.getItem("data"));
 let cheker = 0;
-let voiture;
+let voiture ;
+let compteur = 7;
+
+
+
 
 const liste_voitures = document.querySelector("#liste-voitures");
-display();
-function display() {
+display(voitures);
+function display(voitures) {
 
     liste_voitures.textContent = "";
     voitures.forEach(voiture => {
@@ -92,7 +100,7 @@ function display() {
 
 function ajouter() {
     voitures.push({
-        id: voitures.lenght + 1,
+        id: compteur++,
         marque: Marque.value,
         modele: Modele.value,
         immatriculation: matricul.value,
@@ -107,6 +115,7 @@ function ajouter() {
     catygorie.value = "";
     PrixJ.value = "";
 
+
 }
 annuler.addEventListener("click", (e) => {
     e.preventDefault();
@@ -116,7 +125,7 @@ annuler.addEventListener("click", (e) => {
     matricul.value = "";
     catygorie.value = "";
     PrixJ.value = "";
-    display();
+    display(voitures);
 });
 AjoutBTn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -131,16 +140,16 @@ AjoutBTn.addEventListener("click", (e) => {
     }
     else if (cheker === 0) {
         ajouter();
-        display();
+        display(voitures);
     }
     else if (cheker !== 0) {
         voiture.marque = Marque.value;
         voiture.modele = Modele.value;
         voiture.immatriculation = matricul.value;
         voiture.categorie = catygorie.value;
-        voiture.prixJour = PrixJ.value;
+        voiture.prixJour = Number(PrixJ.value);
         voiture.statut = statut.value;
-
+        
         cheker = 0;
         AjoutBTn.textContent = " Ajouter la voiture";
         annuler.hidden = true;
@@ -150,22 +159,22 @@ AjoutBTn.addEventListener("click", (e) => {
         catygorie.value = "";
         PrixJ.value = "";
     }
-
-    display();
+        localStorage.setItem("data", JSON.stringify(voitures));
+    display(voitures);
 
 
 
 });
 annuler.addEventListener("click", (e) => {
     e.preventDefault();
-        cheker = 0;
-        AjoutBTn.textContent = "Ajouter la voiture";
-        annuler.hidden = true;
-        Marque.value = "";
-        Modele.value = "";
-        matricul.value = "";
-        catygorie.value = "";
-        PrixJ.value = "";
+    cheker = 0;
+    AjoutBTn.textContent = "Ajouter la voiture";
+    annuler.hidden = true;
+    Marque.value = "";
+    Modele.value = "";
+    matricul.value = "";
+    catygorie.value = "";
+    PrixJ.value = "";
 
 });
 
@@ -174,9 +183,14 @@ function Supprimer_fun(matricul) {
     if (delet) {
         voitures = voitures.filter(voiture => voiture.immatriculation !== matricul);
         display(voitures);
+        localStorage.setItem("data", JSON.stringify(voitures));
+
 
     } else if (!delet) {
         return;
+    }
+    if(voitures.length === 0){
+        compteur = 1 ; 
     }
 }
 function Modifier_fun(id) {
@@ -192,22 +206,20 @@ function Modifier_fun(id) {
     AjoutBTn.textContent = "Cofirmer La Modification";
 
 
+
+
 }
 
 
-function recherche(input) {
-    let datafelter = voitures.filter(voiture => {
-      voiture.marque.toLowerCase().startsWith(input.toLowerCase()) ||
-      voiture.modele.toLowerCase().startsWith(input.toLowerCase()) ||
-      voiture.immatriculation.toLowerCase().startsWith(input.toLowerCase()) 
-    
- } ) 
+function recherche_voitures() {
+    const inputsearch = recherche.value.toLowerCase().trim();
+
+    let datafelter = voitures.filter(voiture => 
+        voiture.marque.toLowerCase().includes( inputsearch) ||
+            voiture.modele.toLowerCase().includes( inputsearch) ||
+            voiture.immatriculation.toLowerCase().includes( inputsearch)
+    )
+         display(datafelter);
 
 };
-serch.addEventListener("input", (i) => {
-    i.preventDefault();
-    recherche(serch.value);
-     display();
-
-
-});
+recherche.addEventListener("input", recherche_voitures);
