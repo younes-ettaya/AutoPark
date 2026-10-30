@@ -1,11 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AutoPark — Interface de gestion du parc automobile Atlas Auto." />
+  <title>Gestion du parc · AutoPark</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="js/voitures.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
-    
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="voitures.html" aria-label="AutoPark — Gestion du parc">
+        <span class="brand-mark" aria-hidden="true">A<span>.</span></span>
+        <span>AutoPark<small>ATLAS AUTO</small></span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <!-- index.html est le dashboard à créer par l'apprenant. -->
+        <a href="index.html" aria-current="page">Dashboard</a>
+        <a href="voitures.html">Gestion du parc</a>
+      </nav>
+      <span class="agency-label">Agence de location</span>
+    </div>
+  </header>
+  <main>
+    <section>
+         <div class="py-8 px-8">
+
+           <p class="text-blue-500 font-bold ">VOTRE ESPACE DE GESTION</p>
+           <br>
+           <h1 class="font-bold ">Dashboard</h1>
+           <br>
+           <p class="text-gray-500">Gardez une vue claire sur votre parc automobile.</p>
+         </div>
+    </section>
+      <div class="flex justify-around gap-12 py-8">
+        <div class="bg-white px-5 py-5  w-fit rounded   rounded-t-[15px] rounded-b-reed">
+          <p class="font-bold ">Total</p>
+          <h2 class="font-bold text-blue-700 text-[60px]">24</h2>
+          <p>Prêts à être loués</p>
+          
+        </div>
+        <div class="bg-white px-5 py-5  w-fit rounded   rounded-t-[15px] rounded-b-reed">
+          <p class="font-bold ">Total</p>
+          <h2 class="font-bold text-blue-700">24</h2>
+          <p>Prêts à être loués</p>
+        </div>
+        <div class="bg-white px-5 py-5  w-fit rounded   rounded-t-[15px] rounded-b-reed">
+          <p class="font-bold ">Total</p>
+          <h2 class="font-bold text-blue-700">24</h2>
+          <p>Prêts à être loués</p>
+        </div>
+        <div class="bg-white px-5 py-5  w-fit rounded   rounded-t-[15px] rounded-b-reed">
+          <p class="font-bold ">Total</p>
+          <h2 class="font-bold text-blue-700">24</h2>
+          <p>Prêts à être loués</p>
+        </div>
+
+      </div>
+
+
+
+
+
+    </section>
+    <section>
+      <div class="bg-zinc-700">
+        <p>01 / DISPONIBILITÉ</p>
+        <h2>Votre parc en un coup d’œil</h2>
+        <p>Répartition des 24 véhicules par statut.</p>
+        <div></div>
+        <div>
+          <p>Disponibles</p>
+          <p>14 · 58,3 %</p>
+        </div>
+        <div>
+          <p>Disponibles</p>
+          <p>14 · 58,3 %</p>
+        </div>
+        <div>
+          <p>Disponibles</p>
+          <p>14 · 58,3 %</p>
+        </div>
+      </div>
+      <div>
+        <p>02 / VOTRE PARC</p>
+        <h2>Passez à l’action</h2>
+        <p>Ajoutez une voiture, ajustez son tarif ou mettez à jour sa disponibilité.</p>
+        <button>Gérer le parc →</button>
+        <p>Les indicateurs reflètent vos données enregistrées à chaque ouverture.</p>
+
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <div>
+      <h3>AutoPark · Atlas Auto</h3>
+      <p>Gestion du parc automobile</p>
+    </div>
+  </footer>
+
 </body>
+
 </html>
