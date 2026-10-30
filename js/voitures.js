@@ -9,12 +9,6 @@ const PrixJ = document.getElementById("prix-jour");
 const statut = document.getElementById("statut");
 const AjoutBTn = document.getElementById("bouton-enregistrer")
 const annuler = document.getElementById("annuler-modification");
-<<<<<<< Updated upstream
-const serch = document.getElementById("recherche");
-let voitures = [...voituresInitiales];
-let cheker = 0;
-let voiture;
-=======
 const recherche = document.getElementById("recherche");
 const reinitialiser_filtres = document.getElementById("reinitialiser-filtres");
 
@@ -36,7 +30,6 @@ let cheker = 0;
 let voiture;
 let compteur = 7;
 
->>>>>>> Stashed changes
 
 const liste_voitures = document.querySelector("#liste-voitures");
 display();
@@ -196,13 +189,8 @@ AjoutBTn.addEventListener("click", (e) => {
         catygorie.value = "";
         PrixJ.value = "";
     }
-<<<<<<< Updated upstream
-
-    display();
-=======
     localStorage.setItem("data", JSON.stringify(voitures));
     display(voitures);
->>>>>>> Stashed changes
 
 
 
@@ -229,12 +217,9 @@ function Supprimer_fun(id) {
     } else if (!delet) {
         return;
     }
-<<<<<<< Updated upstream
-=======
     if (voitures.length === 0) {
         compteur = 1;
     }
->>>>>>> Stashed changes
 }
 function Modifier_fun(id) {
     cheker = id
@@ -248,28 +233,6 @@ function Modifier_fun(id) {
     annuler.hidden = false;
     AjoutBTn.textContent = "Cofirmer La Modification";
 
-<<<<<<< Updated upstream
-
-}
-
-
-function recherche(input) {
-    let datafelter = voitures.filter(voiture => {
-      voiture.marque.toLowerCase().startsWith(input.toLowerCase()) ||
-      voiture.modele.toLowerCase().startsWith(input.toLowerCase()) ||
-      voiture.immatriculation.toLowerCase().startsWith(input.toLowerCase()) 
-    
- } ) 
-
-};
-serch.addEventListener("input", (i) => {
-    i.preventDefault();
-    recherche(serch.value);
-     display();
-
-
-});
-=======
 }
 
 function recherche_voitures() {
@@ -344,4 +307,3 @@ reinitialiser_filtres.addEventListener("click", (i) => {
     recherche.value = "";
     display(voitures);
 });
->>>>>>> Stashed changes
