@@ -144,8 +144,7 @@ Selon l’installation, utiliser `python3` à la place de `python`.
 
 Ouvrir ensuite :
 
-- Gestion du parc : [http://localhost:8000/voitures.html](http://localhost:8000/voitures.html)
-- Dashboard, après son implémentation : [http://localhost:8000/index.html](http://localhost:8000/index.html)
+- Dashboard, après son implémentation : [http://localhost:8000/index.html](https://younes-ettaya.github.io/AutoPark/)
 
 Utiliser un serveur local plutôt qu’une ouverture directe des fichiers avec `file://`, afin de charger les modules ES6.
 
