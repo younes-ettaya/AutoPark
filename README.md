@@ -213,8 +213,8 @@ Les cases ci-dessous sont à cocher après exécution des tests correspondants.
 ## Tableau Jira
 
 Le tableau Jira permet de suivre les tâches et leur état d’avancement.
+<img width="1250" height="539" alt="tableaux jira" src="https://github.com/user-attachments/assets/457eaf1b-03b8-4d44-ae1f-4036822ca8ba" />
 
-![Tableau Jira du projet AutoPark](assets/tableaux_jira.png)
 
 ## Déploiement et livrables
 
