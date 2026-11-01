@@ -230,3 +230,4 @@ Livrables attendus :
 ## Périmètre
 
 AutoPark couvre la gestion du parc et le suivi manuel de la disponibilité. L’authentification, la gestion des clients, les contrats, les réservations par dates et les paiements sont hors périmètre.
+
