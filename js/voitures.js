@@ -270,17 +270,17 @@ function recherche_voitures() {
 
 };
 
-function recherche_voitures() {
-    const inputsearch = recherche.value.toLowerCase().trim();
+// function recherche_voitures() {
+//     const inputsearch = recherche.value.toLowerCase().trim();
 
-    let datafelter = voitures.filter(voiture => 
-        voiture.marque.toLowerCase().includes( inputsearch) ||
-            voiture.modele.toLowerCase().includes( inputsearch) ||
-            voiture.immatriculation.toLowerCase().includes( inputsearch)
-    )
-         display(datafelter);
+//     let datafelter = voitures.filter(voiture => 
+//         voiture.marque.toLowerCase().includes( inputsearch) ||
+//             voiture.modele.toLowerCase().includes( inputsearch) ||
+//             voiture.immatriculation.toLowerCase().includes( inputsearch)
+//     )
+//          display(datafelter);
 
-
+// }
 function triDecroissant(voitures) {
     for (let i = 0; i < voitures.length - 1; i++) {
         for (let j = 0; j < voitures.length - 1 - i; j++) {
