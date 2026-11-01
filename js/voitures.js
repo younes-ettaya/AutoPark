@@ -1,6 +1,8 @@
 
 import { voituresInitiales } from "./data.js";
 
+
+
 const Marque = document.getElementById("marque");
 const Modele = document.getElementById("modele");
 const matricul = document.getElementById("immatriculation");
@@ -20,11 +22,18 @@ const erreur_modele = document.getElementById("erreur-modele");
 const aide_immatriculation = document.getElementById("aide-immatriculation");
 const erreur_categorie = document.getElementById("erreur-categorie");
 const erreur_prix_jour = document.getElementById("erreur-prix-jour");
+const liste_voitures = document.querySelector("#liste-voitures");
+
+
 
 
 if (!localStorage.getItem("data")) {
     localStorage.setItem("data", JSON.stringify(voituresInitiales))
 }
+
+
+
+
 let voitures = JSON.parse(localStorage.getItem("data"));
 let cheker = 0;
 let voiture ;
@@ -33,8 +42,8 @@ let compteur = 7;
 
 
 
-const liste_voitures = document.querySelector("#liste-voitures");
-display(voitures);
+
+//la boucle pour affichier le tableaux
 function display(voitures) {
 
     liste_voitures.textContent = "";
@@ -107,6 +116,12 @@ function display(voitures) {
 
     });
 }
+
+
+display(voitures);
+
+
+//pour ajouter une voiture
 function ajouter() {
     voitures.push({
         id: compteur++,
@@ -126,16 +141,11 @@ function ajouter() {
 
 
 }
-annuler.addEventListener("click", (e) => {
-    e.preventDefault();
-    AjoutBTn.textContent = "Ajouter la voiture";
-    Marque.value = "";
-    Modele.value = "";
-    matricul.value = "";
-    catygorie.value = "";
-    PrixJ.value = "";
-    display(voitures);
-});
+
+
+
+
+//fonction qui verifier que input correct
 function checkerinput() {
     let valide = true;
     erreur_marque.textContent = "";
@@ -166,6 +176,8 @@ function checkerinput() {
     }
     return valide;
 }
+
+//bottun ajouter est modifier par rapport a variables cheker est ce que egale zéro ou No
 AjoutBTn.addEventListener("click", (e) => {
     e.preventDefault();
     if (!checkerinput())
@@ -198,6 +210,9 @@ AjoutBTn.addEventListener("click", (e) => {
 
 
 });
+
+
+//bottun annuler la confirmation de modifier
 annuler.addEventListener("click", (e) => {
     e.preventDefault();
     cheker = 0;
@@ -211,6 +226,8 @@ annuler.addEventListener("click", (e) => {
 
 });
 
+
+//fonction supprimer lorsque click
 function Supprimer_fun(id) {
     const delet = confirm("cofirmer la supprission");
     if (delet) {
@@ -226,6 +243,8 @@ function Supprimer_fun(id) {
         compteur = 1;
     }
 }
+
+//fonction Modifier lorsque click
 function Modifier_fun(id) {
     cheker = id
     voiture = voitures.find(voiture => voiture.id === Number(id));
@@ -241,6 +260,8 @@ function Modifier_fun(id) {
 }
 
 
+
+//recherhcer une voiture par modele , marque et le matricule et l'affichage par tri croissante et decroissante 
 function recherche_voitures() {
     const inputsearch = recherche.value.toLowerCase().trim();
 
@@ -270,17 +291,9 @@ function recherche_voitures() {
 
 };
 
-// function recherche_voitures() {
-//     const inputsearch = recherche.value.toLowerCase().trim();
 
-//     let datafelter = voitures.filter(voiture => 
-//         voiture.marque.toLowerCase().includes( inputsearch) ||
-//             voiture.modele.toLowerCase().includes( inputsearch) ||
-//             voiture.immatriculation.toLowerCase().includes( inputsearch)
-//     )
-//          display(datafelter);
 
-// }
+//fonction tri croissante 
 function triDecroissant(voitures) {
     for (let i = 0; i < voitures.length - 1; i++) {
         for (let j = 0; j < voitures.length - 1 - i; j++) {
@@ -296,6 +309,8 @@ function triDecroissant(voitures) {
 
 }
 
+
+//fonction tri decroissante 
 function triCoissant(voitures) {
     for (let i = 0; i < voitures.length - 1; i++) {
         for (let j = 0; j < voitures.length - 1 - i; j++) {
@@ -310,11 +325,18 @@ function triCoissant(voitures) {
     }
 
 }
+
+
+
+
+//recherche de voiture par rapport a le type de l'action 
 recherche.addEventListener("input", recherche_voitures);
 filtre_categorie.addEventListener("change", recherche_voitures);
 filtre_statut.addEventListener("change", recherche_voitures);
 tri_prix.addEventListener("change", recherche_voitures);
 
+
+//
 reinitialiser_filtres.addEventListener("click", (i) => {
     i.preventDefault();
     filtre_statut.selectedIndex = 0;
