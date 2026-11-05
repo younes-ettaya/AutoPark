@@ -31,9 +31,6 @@ if (!localStorage.getItem("data")) {
     localStorage.setItem("data", JSON.stringify(voituresInitiales))
 }
 
-
-
-
 let voitures = JSON.parse(localStorage.getItem("data"));
 let cheker = 0;
 let voiture ;
@@ -46,7 +43,7 @@ let compteur = 7;
 //la boucle pour affichier le tableaux
 function display(voitures) {
 
-    liste_voitures.textContent = "";
+    liste_voitures.textContent ="";
     voitures.forEach(voiture => {
 
         const tr = document.createElement("tr");
@@ -233,6 +230,7 @@ function Supprimer_fun(id) {
     if (delet) {
         voitures = voitures.filter(voiture => voiture.id !== id);
         display(voitures);
+        
         localStorage.setItem("data", JSON.stringify(voitures));
 
 
@@ -336,7 +334,7 @@ filtre_statut.addEventListener("change", recherche_voitures);
 tri_prix.addEventListener("change", recherche_voitures);
 
 
-//
+
 reinitialiser_filtres.addEventListener("click", (i) => {
     i.preventDefault();
     filtre_statut.selectedIndex = 0;
