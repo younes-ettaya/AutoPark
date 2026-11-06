@@ -93,6 +93,8 @@ const liste_cartes = document.getElementById("liste-cartes");
 const etape_1 = document.getElementById("etape-1")
 const etape_2 = document.getElementById("etape-2")
 const etape_3 = document.getElementById("etape-3")
+const etape_4 = document.getElementById("etape-4")
+const etape_5 = document.getElementById("etape-5")
 
 
 const button_1 = document.getElementById("button-1")
@@ -151,20 +153,20 @@ function affichier(Car_voiture) {
     label.appendChild(div2);
 
 
-    h2.setAttribute("class", "font-bold ")
+    h2.setAttribute("class", "font-bold ");
     h2.textContent = car.marque + " " + car.modele;
     div2.appendChild(h2);
 
 
 
-    pp.setAttribute("class", "text-green-600 ")
+    pp.setAttribute("class", "text-green-600 ");
     pp.textContent = car.statut;
     div2.appendChild(pp);
 
 
 
 
-    h3.setAttribute("class", "font-bold ")
+    h3.setAttribute("class", "font-bold ");
     h3.textContent = car.prixJour + " MAD / jour";
     div2.appendChild(h3);
 
@@ -176,12 +178,12 @@ function affichier(Car_voiture) {
 }
 
 function sauvgarderLocal() {
-  localStorage.setItem("data", JSON.stringify(config.voitures))
+  localStorage.setItem("data", JSON.stringify(config.voitures));
 
 }
 function chargerProduits() {
-  if (!localStorage.getItem("data"))
-    config.voitures = JSON.parse(localStorage.getItem("data"));
+  if (!localStorage.getItem("data"));
+  config.voitures = JSON.parse(localStorage.getItem("data"));
 }
 
 
@@ -191,6 +193,8 @@ function etapes() {
     etape_1.hidden = false;
     etape_2.hidden = true;
     etape_3.hidden = true;
+    etape_4.hidden = true;
+
     button_1.textContent = "Recommencer"
 
     validation_Etape1.textContent = "1";
@@ -204,6 +208,8 @@ function etapes() {
     etape_1.hidden = true;
     etape_2.hidden = false;
     etape_3.hidden = true;
+    etape_4.hidden = true;
+
     button_1.textContent = "Précédent"
 
     validation_Etape1.textContent = "✓";
@@ -220,14 +226,54 @@ function etapes() {
     etape_1.hidden = true;
     etape_2.hidden = true;
     etape_3.hidden = false;
+    etape_4.hidden = true;
+
     button_1.textContent = "Précédent"
 
     validation_Etape1.textContent = "✓";
     validation_Etape2.textContent = "✓";
     validation_Etape3.textContent = "3";
     validation_Etape4.textContent = "4";
-        validation_Etape3.classList.remove("bg-slate-200")
+    validation_Etape4.classList.remove("bg-blue-700")
+    validation_Etape4.classList.add("bg-slate-200")
+    validation_Etape3.classList.remove("bg-slate-200")
     validation_Etape3.classList.add("bg-blue-700")
+
+
+  }
+  else if (selectedConfig.etape == 4) {
+    etape_1.hidden = true;
+    etape_2.hidden = true;
+    etape_3.hidden = true;
+    etape_4.hidden = false;
+    button_1.textContent = "Précédent"
+
+    validation_Etape1.textContent = "✓";
+    validation_Etape2.textContent = "✓";
+    validation_Etape3.textContent = "✓";
+    validation_Etape4.textContent = "4";
+    validation_Etape4.classList.remove("bg-slate-200");
+    validation_Etape4.classList.add("bg-blue-700");
+
+
+  }
+  else if (selectedConfig.etape == 5) {
+    etape_1.hidden = true;
+    etape_2.hidden = true;
+    etape_3.hidden = true;
+    etape_4.hidden = true;
+    etape_5.hidden = false;
+
+    button_1.hidden = true;
+    button_2.textContent ="Nouvelle location"
+
+
+    validation_Etape1.textContent = "✓";
+    validation_Etape2.textContent = "✓";
+    validation_Etape3.textContent = "✓";
+    validation_Etape4.textContent = "4";
+    validation_Etape4.classList.remove("bg-slate-200");
+    validation_Etape4.classList.add("bg-blue-700");
 
 
   }
@@ -236,7 +282,7 @@ function etapes() {
 
 button_1.addEventListener("click", (e) => {
   e.preventDefault();
-   
+
   if (selectedConfig.etape > 1) {
     selectedConfig.etape--;
   }
@@ -246,9 +292,12 @@ button_1.addEventListener("click", (e) => {
 
 button_2.addEventListener("click", (e) => {
   e.preventDefault();
- 
-  if (selectedConfig.etape < 3) {
+
+  if (selectedConfig.etape < 5) {
     selectedConfig.etape++;
+    
   }
+  
+  
   etapes();
 });

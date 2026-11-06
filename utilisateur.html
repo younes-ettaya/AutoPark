@@ -39,7 +39,7 @@
                 <p class="text-[12px] text-gray-500 ">Votre voiture, vos dates, vos options. À vous de choisir.</p>
             </div>
         </section>
-        <section class="flex flex-cols gap-3 py-2 m-5 justify-around bg-white text-center items-center rounded-[20px] ">
+        <section class="flex flex-cols gap-3 p-3 m-5 justify-around bg-white text-center items-center rounded-[20px] ">
 
             <div class="flex flex-col gap-2 justify-center items-center md:flex-row">
                 <h4 class="text-[17px] bg-indigo-700 w-[28px] h-[27px] rounded-[50%] " id="validationEtape1">1</h4>
@@ -67,11 +67,12 @@
                     <div class="p-4 flex flex-col gap-2">
                         <p class="font-bold text-indigo-600"> 01 / VÉHICULE</p>
                         <h2 class="font-bold ">Choisissez votre véhicule</h2>
-                        <p class="text-[12px] text-gray-500 ">Sélectionnez une voiture disponible et votre période  delocation.</p>
+                        <p class="text-[12px] text-gray-500 ">Sélectionnez une voiture disponible et votre période
+                            delocation.</p>
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-3" id="liste-cartes">
-                    
-                    <!-- code des voiture  -->
+
+                        <!-- code des voiture  -->
                     </div>
 
 
@@ -79,7 +80,7 @@
 
                     <h2 class="font-bold p-4">Votre période de location</h2>
 
-                    <form id="formulaire-dates">
+                    <form class=" lg:grid grid-cols-2" id="formulaire-dates">
                         <div class="flex flex-col gap-2 p-4">
                             <label for="dateInput">Date de début *</label>
                             <input type="date" id="dateInput" name="dateInput" required>
@@ -98,7 +99,7 @@
                     <hr class="mx-4 my-3">
 
                     <!-- //les deux button Précédent Suivant -->
-                    
+
 
                 </div>
                 <div id="etape-2" hidden>
@@ -107,7 +108,7 @@
                         <h2 class="font-bold ">Où récupérer votre voiture ?</h2>
                         <p class="text-[12px] text-gray-500 ">Choisissez le lieu qui vous convient.</p>
                     </div>
-                    <div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3">
 
                         <label class="flex flex-col gap-4 p-4  m-4 border-3 border-blue-700 rounded-[15px]">
                             <div class="flex flex-col gap-1">
@@ -122,18 +123,18 @@
                                 <p class="font-bold text-[18px]">À l’aéroport</p>
                                 <p class="font-bold text-blue-700">+150 MAD</p>
                             </div>
-                           
+
                         </label>
                         <label class="flex flex-col gap-4 p-4  m-4 border-3 border-gray-300 rounded-[15px]">
-                            <div  class="flex flex-col gap-1">
+                            <div class="flex flex-col gap-1">
                                 <input type="radio" name="récupérer-ou" id="carte-recupérer" class="!w-4">
                                 <p class="font-bold text-[18px]">À une adresse</p>
                                 <p class="font-bold text-blue-700">+100 MAD</p>
                             </div>
-                           
+
                         </label>
-                       
-                       
+
+
                     </div>
 
 
@@ -147,32 +148,35 @@
                         </div>
                         <div class="flex flex-col gap-2 p-4 " hidden>
                             <label for="text">Aéroport *</label>
-                            <input type="text" id="InputAeroport" name="InputAeroport" placeholder="Casablanca — Mohammed V" required>
+                            <input type="text" id="InputAeroport" name="InputAeroport"
+                                placeholder="Casablanca — Mohammed V" required>
                         </div>
-                        <div class="flex flex-col gap-2 p-4 "hidden>
+                        <div class="flex flex-col gap-2 p-4 " hidden>
                             <label for="text">Numéro du vol *</label>
                             <input type="text" id="NmInput" name="NmInput" required>
                         </div>
-                         <div class="flex flex-col gap-2 p-4 "hidden>
+                        <div class="flex flex-col gap-2 p-4 " hidden>
                             <label for="timeArriver">Heure d’arrivée *</label>
                             <input type="time" id="timeArriver" name="timeArriver" required>
                         </div>
-                        <div class="flex flex-col gap-2 p-4 "hidden>
+                        <div class="flex flex-col gap-2 p-4 " hidden>
                             <label for="text">Ville *</label>
                             <input type="text" id="villeInput" name="villeInput" placeholder="Casablanca" required>
                         </div>
-                        <div class="flex flex-col gap-2 p-4 "hidden>
+                        <div class="flex flex-col gap-2 p-4 " hidden>
                             <label for="text">Adresse complète *</label>
-                            <input type="text" id="AdresseInput" name="AdresseInput" placeholder="10,HAY ARIAD" required>
+                            <input type="text" id="AdresseInput" name="AdresseInput" placeholder="10,HAY ARIAD"
+                                required>
                         </div>
-                        <div class="flex flex-col gap-2 p-4 "hidden>
+                        <div class="flex flex-col gap-2 p-4 " hidden>
                             <label for="time">Heure de livraison *</label>
                             <input type="time" id="timelivrai" name="timeLivrai" required>
                         </div>
-                       
+
                     </form>
                     <div class="p-4 rounded-sm">
-                        <p class="p-4 text-gray-50 bg-indigo-400 rounded-[15px]">Le supplément de récupération est ajouté une seule fois au total.</p>
+                        <p class="p-4 text-gray-50 bg-indigo-400 rounded-[15px]">Le supplément de récupération est
+                            ajouté une seule fois au total.</p>
                     </div>
 
 
@@ -180,7 +184,7 @@
                     <hr class="mx-4 my-3 text-gray-400">
 
                     <!-- //les deux button Précédent Suivant -->
-                   
+
 
                 </div>
                 <div id="etape-3" hidden>
@@ -191,7 +195,7 @@
                     </div>
                     <div>
 
-                           <label class="flex flex-col gap-1 p-4  m-4 border-3 border-gray-300 rounded-[15px]">
+                        <label class="flex flex-col gap-1 p-4  m-4 border-3 border-gray-300 rounded-[15px]">
                             <div class="flex gap-4 items-center ">
                                 <input type="checkbox" name="voitureOption1" id="carte-voiture" class="!w-4">
                                 <p class="text-black-400  text-[18px] ">Siège bébé</p>
@@ -199,7 +203,7 @@
                             <div class="flex flex-col gap-2">
 
                                 <p class="text-gray-500 mx-8 ">30 MAD / jour · soit 90 MAD pour 3 jours</p>
-                               
+
 
                             </div>
                         </label>
@@ -211,16 +215,17 @@
                             <div class="flex flex-col gap-2">
 
                                 <p class="text-gray-500 mx-8 ">200 MAD / jour · soit 600 MAD pour 3 jours</p>
-                               
+
 
                             </div>
                         </label>
-                       
+
                     </div>
 
-                  
+
                     <div class="p-4 rounded-sm">
-                        <p class="p-4 text-gray-50 bg-indigo-400 rounded-[15px]">Vous pouvez sélectionner une, deux ou aucune option.</p>
+                        <p class="p-4 text-gray-50 bg-indigo-400 rounded-[15px]">Vous pouvez sélectionner une, deux ou
+                            aucune option.</p>
                     </div>
 
 
@@ -228,17 +233,151 @@
                     <hr class="mx-4 text-gray-500 my-3">
 
                     <!-- //les deux button Précédent Suivant -->
-                    
+
 
                 </div>
-                <div class="p-4 flex gap-2 justify-around ">
-                        <button class=" bg-zinc-700 text-stone-200 w-35 h-12 rounded-[10px] " id="button-1">Précédent</button>
-                        <button class=" bg-blue-600 text-zinc-100 w-35 h-12 rounded-[10px] "id="button-2">Suivant</button>
+
+
+
+                <div id="etape-4" hidden>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold text-indigo-600">04 / RÉCAPITULATIF/ </p>
+                        <h2 class="font-bold ">Vérifiez votre demande</h2>
+                        <p class="text-[12px] text-gray-500 ">Tout est prêt ? Vérifiez vos informations avant de
+                            confirmer.</p>
+
                     </div>
+
+                    <div class="grid grid-col lg:grid-cols-1">
+
+                        <div class="flex flex-col gap-3 p-4  m-4 rounded-[15px]">
+                            <div class="flex justify-between flex-cols ">
+                                <p class="font-bold text-[18px]">Véhicule et dates</p>
+                                <button class=" !border p-2   !border-gray-400 rounded-[8px] ">Modifier</button>
+
+                            </div>
+                            <div>
+                                <p class="text-gray-500">Dacia Sandero · 250 MAD / jour Du 10 au 12 novembre 2026 · 3
+                                    jours</p>
+
+                            </div>
+                        </div>
+
+                        <hr class="mx-4 my-5 text-gray-500">
+
+                        <div class="flex flex-col gap-3 p-4  m-4 rounded-[15px]">
+                            <div class="flex justify-between flex-cols gap-1">
+                                <p class="font-bold text-[18px]">Récupération</p>
+                                <button class=" !border p-2   !border-gray-400 rounded-[8px] ">Modifier</button>
+
+                            </div>
+                            <div>
+                                <p class="text-gray-500">Aéroport Mohammed V, Casablanca Vol AT 205 · arrivée à 10:30
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <hr class="mx-4 my-5 text-gray-500">
+
+                        <div class="flex flex-col gap-3 p-4  m-4 rounded-[15px]">
+                            <div class="flex justify-between flex-cols gap-1">
+                                <p class="font-bold text-[18px]">Options</p>
+                                <button class=" !border p-2   !border-gray-400 rounded-[8px] ">Modifier</button>
+
+                            </div>
+                            <div>
+                                <p class="text-gray-500">Siège bébé · 30 MAD / jour Sans conducteur supplémentaire</p>
+
+                            </div>
+                        </div>
+
+                        <hr class="mx-4 my-5 text-gray-500">
+                        <hr class="mx-4 my-5 text-gray-500">
+
+                        <div class="p-4 rounded-sm">
+                            <p class="p-4 text-gray-50 bg-indigo-400 rounded-[15px]">La confirmation transmet une
+                                demande simulée. Aucun paiement n’est demandé.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- //etape final de resu -->
+                <div id="etape-5" hidden>
+                    <div class="p-4 flex flex-col  gap-4">
+                        <p class="bg-green-200 w-fit p-2 text-green-950 rounded-[8px]">✓ Demande confirmée</p>
+                        <h2 class="font-bold ">Votre demande est enregistrée.</h2>
+                        <p class="text-[12px] text-gray-500 ">Merci ! Retrouvez ci-dessous le résumé de votre location.
+                        </p>
+
+
+                        <p class="font-bold text-indigo-600">04/ RÉCAPITULATIF</p>
+                        <h2 class="font-bold ">Votre demande est enregistrée.</h2>
+                        <p class="text-[12px] text-gray-500 ">Tout est prêt ? Vérifiez vos informations avant de
+                            confirmer.</p>
+                    </div>
+                    <div class="p-4 flex flex-col  gap-4">
+
+                        <div class="flex flex-col gap-3   ">
+
+                            <p class="font-bold text-[18px]">Véhicule et dates</p>
+                            <p class="text-gray-500">Dacia Sandero · 250 MAD / jour Du 10 au 12 novembre 2026 · 3
+                                jours</p>
+
+
+
+                        </div>
+                        <hr class="p-4 my-4 text-gray-500">
+                        <div class="flex flex-col gap-3  ">
+
+                            <p class="font-bold text-[18px]">Véhicule et dates</p>
+                            <p class="text-gray-500">Dacia Sandero · 250 MAD / jour Du 10 au 12 novembre 2026 · 3
+                                jours</p>
+
+
+
+                        </div>
+                        <hr class="p-4 my-5 text-gray-500">
+                        <div class="flex flex-col gap-3   ">
+
+                            <p class="font-bold text-[18px]">Véhicule et dates</p>
+                            <p class="text-gray-500">Dacia Sandero · 250 MAD / jour Du 10 au 12 novembre 2026 · 3
+                                jours</p>
+
+
+
+                        </div>
+                        <hr class="p-4 my-5 text-gray-500">
+
+                        <div class="p-4 rounded-sm">
+                            <p class="p-4 text-gray-50 bg-indigo-400 rounded-[15px]">La confirmation transmet une
+                                demande simulée. Aucun paiement n’est demandé.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <div class="p-4 flex gap-2 justify-between ">
+                    <button class=" bg-zinc-700 text-stone-200 w-35 h-12 rounded-[10px] "
+                        id="button-1">Précédent</button>
+                    <button class=" bg-blue-600 text-zinc-100 w-35 h-12 rounded-[10px] " id="button-2">Suivant</button>
+                </div>
             </div>
 
 
-            <div class="bg-white  rounded-[10px] m-5">
+            <div class="bg-white h-fit rounded-[10px] m-5">
                 <div>
                     <div class="p-4 flex flex-col gap-3">
                         <p class="font-bold text-indigo-600">VOTRE LOCATION</p>
