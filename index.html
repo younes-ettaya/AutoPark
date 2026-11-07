@@ -32,80 +32,111 @@
     </div>
   </header>
   <main>
-    <section>
-      <div class="py-8 px-8">
+    <section class="m-4">
+      <div class="p-2">
 
         <p class="text-blue-500 font-bold ">VOTRE ESPACE DE GESTION</p>
-        <br>
+
         <h1 class="font-bold ">Dashboard</h1>
-        <br>
+
         <p class="text-gray-500">Gardez une vue claire sur votre parc automobile.</p>
       </div>
-    </section>
-    <div class="flex justify-around gap-12 py-8  flex-wrap">
-      <div class="bg-white px-5 py-5  w-fit rounded   rounded-t-[15px] rounded-b-reed ">
-        <p class="font-bold ">Total</p>
-        <h2 class="font-bold text-blue-700 ">24</h2>
-        <p>Prêts à être loués</p>
-
-      </div>
-      <div class="bg-white px-5 py-5  w-fit rounded   rounded-t-[15px] rounded-b-reed">
-        <p class="font-bold ">Total</p>
-        <h2 class="font-bold text-blue-700">24</h2>
-        <p>Prêts à être loués</p>
-      </div>
-      <div class="bg-white px-5 py-5  w-fit rounded   rounded-t-[15px] rounded-b-reed">
-        <p class="font-bold ">Total</p>
-        <h2 class="font-bold text-blue-700">24</h2>
-        <p>Prêts à être loués</p>
-      </div>
-      <div class="bg-white px-5 py-5  w-fit rounded   rounded-t-[15px] rounded-b-reed">
-        <p class="font-bold ">Total</p>
-        <h2 class="font-bold text-blue-700">24</h2>
-        <p>Prêts à être loués</p>
-      </div>
-
-    </div>
 
 
 
 
 
-    </section>
-    <section>
-      <div>
-        <p>01 / DISPONIBILITÉ</p>
-        <h2>Votre parc en un coup d’œil</h2>
-        <p>Répartition des 24 véhicules par statut.</p>
-        <div></div>
-        <div>
-          <p>Disponibles</p>
-          <p>14 · 58,3 %</p>
+
+      <div class="grid grid-cols-1 gap-3  md:grid-cols-2 lg:grid-cols-4">
+        <div class="bg-white p-4  rounded-[15px]  ">
+          <p class="font-bold text-[22px] ">Total</p>
+          <h2 class="font-bold !text-[35px] text-blue-700 ">24</h2>
+          <p class="text-gray-500 ">Véhicules enregistrés</p>
+
         </div>
-        <div>
-          <p>Disponibles</p>
-          <p>14 · 58,3 %</p>
+        <div class="bg-white p-4  rounded-[15px]  ">
+          <p class="font-bold text-[22px] text-emerald-700">Disponibles</p>
+          <h2 class="font-bold !text-[35px] text-blue-700 ">24</h2>
+          <p class="text-gray-500 ">Prêts à être loués</p>
+
         </div>
-        <div>
-          <p>Disponibles</p>
-          <p>14 · 58,3 %</p>
+        <div class="bg-white p-4  rounded-[15px]  ">
+          <p class="font-bold text-[22px] text-red-300 ">Louées</p>
+          <h2 class="font-bold !text-[35px] text-blue-700 ">24</h2>
+          <p class="text-gray-500 ">Locations en cours</p>
+
         </div>
-      </div>
-      <div>
-        <p>02 / VOTRE PARC</p>
-        <h2>Passez à l’action</h2>
-        <p>Ajoutez une voiture, ajustez son tarif ou mettez à jour sa disponibilité.</p>
-        <button>Gérer le parc →</button>
-        <p>Les indicateurs reflètent vos données enregistrées à chaque ouverture.</p>
+        <div class="bg-white p-4  rounded-[15px]  ">
+          <p class="font-bold text-[22px] text-amber-800">En maintenance</p>
+          <h2 class="font-bold !text-[35px] text-blue-700 ">24</h2>
+          <p class="text-gray-500 ">Véhicules immobilisés</p>
+
+        </div>
+
 
       </div>
 
-    </section>
+
+
+
+
+      </div>
+      </section>
+      <section class="grid grid-cols-1 m-4 gap-3 md:grid-cols-3  lg:grid-cols-3">
+
+        <div class="bg-white  rounded-[8px] md:col-span-2 lg:col-span-2">
+          <div class="grid grid-cols-1 p-3 gap-4">
+            <div class=" flex flex-col gap-3  ">
+             
+              <p class="text-blue-700 font-bold">01 / DISPONIBILITÉ</p>
+              <h2 class="font-bold ">Votre parc en un coup d’œil</h2>
+              <p class="text-gray-500">Répartition des 24 véhicules par statut.</p>
+
+            </div>
+             <div class="flex h-3 overflow-hidden rounded-[10px] mt-6">
+                <div class="bg-emerald-700 w-[58.33%]"></div>
+                <div class="bg-red-300 w-[33.33%]"></div>
+                <div class="bg-amber-800 w-[8.33%]"></div>
+              </div>
+            <div class="flex flex-col-2 justify-between ">
+              <p class="text-emerald-700 text-[16px] font-bold">Disponibles</p>
+              <p class="font-bold text-[16px]"> 33,3 %</p>
+            </div>
+            <div class="flex flex-col-2 justify-between ">
+              <p class="text-red-300 text-[16px] font-bold"> Louées</p>
+              <p class="font-bold text-[16px]"> 58,3 %</p>
+            </div>
+            <div class="flex flex-col-2 justify-between ">
+              <p class="text-amber-800 text-[16px] font-bold"> En maintenance</p>
+              <p class="font-bold text-[16px]"> 8,3 %</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="bg-white rounded-[8px]">
+
+          <div class="grid grid-cols-1 gap-4 p-3">
+            <p class="text-blue-700 font-bold">02 / VOTRE PARC</p>
+            <h2 class="font-bold ">Passez à l’action</h2>
+            <p class="c">Ajoutez une voiture, ajustez son tarif ou mettez à jour sa disponibilité.</p>
+            <a href="voitures.html"
+              class="bg-blue-700 !text-white !text-[20px] !font-semibold text-center !rounded-[8px]">Gérer le parc →</a>
+            <p class="text-gray-500">Les indicateurs reflètent vos données enregistrées à chaque ouverture.</p>
+
+          </div>
+        </div>
+
+
+
+
+
+      </section>
+
   </main>
-  <footer>
+  <footer class=" m-4 py-4">
     <div>
-      <h3>AutoPark · Atlas Auto</h3>
-      <p>Gestion du parc automobile</p>
+      <h3 class="font-bold ">AutoPark · Atlas Auto</h3>
+      <p class="text-gray-500">Gestion du parc automobile</p>
     </div>
   </footer>
 
